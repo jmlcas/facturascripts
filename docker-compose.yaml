@@ -1,11 +1,9 @@
-version: '3'
-
 services:
 
   mysql:
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
-    restart: always
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: mypassword
     volumes:
@@ -13,7 +11,7 @@ services:
 
   facturascripts:
     image: facturascripts/facturascripts:latest
-    restart: always
+    restart: unless-stopped
     ports:
       - "8200:80"
     volumes:
@@ -21,10 +19,7 @@ services:
 
   adminer:
     image: adminer
-    restart: always
+    restart: unless-stopped
     ports:
-      - "8080:8080"
-      
-      
-      
-      
+      - "8080:8080"   
+  
