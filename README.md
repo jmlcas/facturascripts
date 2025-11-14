@@ -1,9 +1,8 @@
-# facturascripts
-Facturascripts - Docker-compose
+# Facturascripts
 
 --------------------------------------------------
 
-Ver en "localhost:8200"
+Ver en "http://localhost:8200"
 
 Escribe "mysql" como host base de datos
 
@@ -19,7 +18,7 @@ Contraseña: admin
 
 --------------------------------------------------
 
-Ver Adminer en "localhost:8080"
+Ver Adminer en "http://localhost:8080"
 
 Servidor: mysql
 
